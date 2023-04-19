@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>秘罐</title>
+    <meta name="keywords"
+          content="聊天,交友,树洞,社交,社交app,漂流瓶,相亲,附近,同城,在线约,匿名,倾诉,悄悄话,恋爱,约会,陌生人,找对象,寂寞">
+    <meta name="description"
+          content="秘罐，悄悄结交新朋友。每个树洞开启你的不同分身，每个分身都可以修改名字和头像，别人无法追踪你，让你安全放心的倾诉、聊天和结交新朋友。">
+    <link rel="stylesheet" href="/static/lib/uikit/css/uikit.min.css">
+    <link rel="stylesheet" href="/static/lib/uikit/css/common.css">
+    <script src="/static/lib/jquery3.6.0.js"></script>
+    <script src="/static/lib/uikit/js/uikit.min.js"></script>
+    <style type="text/css">
+        .img1 {
+            width: 220px;
+            height: 200px;
+        }
+
+        .img2 {
+            width: 490px;
+            height: 105px;
+        }
+
+        .img3 {
+            width: 490px;
+            height: 125px;
+        }
+
+        .img4 {
+            width: 490px;
+            height: 160px;
+        }
+
+        .img5 {
+            width: 260px;
+            height: 542px;
+        }
+
+        .iosimg, .androidimg {
+            width: 180px;
+            height: 60px;
+        }
+
+        .alphaimg {
+            opacity: 0.5;
+        }
+
+        .treehole {
+            width: 80px;
+            height: 80px;
+        }
+
+        .iconimg {
+            animation: slideshow 60s linear infinite;
+            -webkit-animation: slideshow 60s linear infinite;
+            transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+        }
+
+        .imgItem {
+            display: inline;
+            width: 1065px;
+            height: 80px;
+            background: url("/static/image/ico_treehole_all.png") no-repeat left;
+            background-size: 1065px 80px;
+        }
+
+        @keyframes slideshow {
+            0% {
+                -webkit-transform: translateX(10%);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+
+        @media ( max-width: 991px) {
+            .img1 {
+                width: 198px;
+                height: 180px;
+            }
+
+            .img2 {
+                width: 392px;
+                height: 84px;
+            }
+
+            .img3 {
+                width: 392px;
+                height: 100px;
+            }
+
+            .img4 {
+                width: 392px;
+                height: 128px;
+            }
+
+            .img5 {
+                width: 234px;
+                height: 488px;
+            }
+
+            .iosimg, .androidimg {
+                width: 162px;
+                height: 54px;
+            }
+
+            .imgItem {
+                width: calc(100 vh-160px);
+                height: calc((100vh-160px) * 80px / 1065px);
+                background: url("/static/image/ico_treehole_all.png") no-repeat center;
+                background-size: cover;
+            }
+
+            /*@keyframes slideshow {
+                0%{
+                   -webkit-transform: translateX(100%);
+                }
+                100% {
+               -webkit-transform: translateX(-200%);
+                }
+            }*/
+        }
+
+        @media ( max-width: 767px) {
+            .img1 {
+                width: 176px;
+                height: 160px;
+            }
+
+            .img5 {
+                width: 208px;
+                height: 433px;
+            }
+
+            .iosimg, .androidimg {
+                width: 144px;
+                height: 48px;
+            }
+
+            /*.imgscroll{
+               max-width: calc(100%);
+               overflow: hidden;
+            }
+            .imgItem{
+                width:calc(100vh-160px);
+                height:calc((100vh-160px)*80px/780px);
+                background: url("img/ico_treehole_all.png") no-repeat left;
+                background-size: cover;
+            }
+            @keyframes slideshow {
+              0%{
+                   -webkit-transform: translateX(50%);
+                }
+              100% {
+                -webkit-transform: translateX(-300%);
+              }
+            }*/
+        }
+
+        @media ( max-width: 639px) {
+        }
+
+        @media ( max-width: 400px) {
+            .img2 {
+                width: 320px;
+                height: 68px;
+            }
+
+            .img3 {
+                width: 320px;
+                height: 81px;
+            }
+
+            .img4 {
+                width: 320px;
+                height: 104px;
+            }
+
+            .iosimg, .androidimg {
+                width: 126px;
+                height: 42px;
+            }
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            position: relative;
+        }
+
+    </style>
+</head>
+<body class="loginbg">
+<div class="uk-container  uk-margin-xlarge-top uk-nav-center thin" style="min-width: 320px;">
+    <div class="uk-margin-medium-top">
+        <div>
+            <img src="/static/image/logo.png" class="img1 uk-margin-top">
+        </div>
+        <div class="uk-margin-medium-top color_273D37" style="max-width: 500px; margin: 0 auto; line-height: 1.6">
+            <div>
+                <span class="font32 thick">秘罐</span><span class="font22"><br>
+						ANONYMOUS, CONFIDE, CHAT AND MAKE FRIENDS<br> 匿名、倾诉、聊天和交友</span>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="color_273D37 font28 thick">特色功能介绍</div>
+    <div class="color_273D37 uk-margin-top uk-margin-medium-bottom font22">
+        <br/> 1号树洞：秘密<br/> 没人知道你是谁，向树洞倾述你心里的秘密吧。小喵会推荐给合适的人，等候有缘人的回应吧。<br/>
+        <br/> 2号树洞：坦白<br/> 向树洞坦白你的优点、缺点、兴趣爱好、怪癖、隐疾或是家长里短，等候有缘人的回应吧。
+    </div>
+    <div class="uk-margin-xlarge-top imgscroll" style="overflow: hidden;position: relative;display: inline-flex;">
+        <div class="imgItem iconimg uk-margin-medium-right"></div>
+        <div class="imgItem iconimg uk-margin-medium-left uk-margin-medium-right"></div>
+        <div class="imgItem iconimg uk-margin-medium-left"></div>
+
+    </div>
+
+    <div class="uk-container thin">
+        <div class="color_6B857A uk-nav-center font22 uk-margin-xlarge-top">
+            <span class="iosimg uk-margin-right" style="display:inline-flex;align-items:center;justify-content:center;">iPhone / iPad版</span>
+            <span class="androidimg uk-margin-left"
+                  style="display:inline-flex;align-items:center;justify-content:center;">Android版</span>
+        </div>
+        <div class="uk-margin-top" style="text-align: center;">
+            <a href="https://apps.apple.com/cn/app/%E6%A0%91%E6%B4%9E%E5%96%B5/id1574643729?platform=iphone"
+               target="_blank"><img src="/static/image/Appstore.png" class="iosimg uk-margin-right"></a>
+            <a href="https://www.miao-app.com/app/android/ShuDongMiao.apk" target="_blank"><img
+                    src="/static/image/Android.png" class="androidimg uk-margin-left"></a>
+        </div>
+
+
+        <div class="uk-margin-xlarge-top uk-margin-large-bottom uk-nav-center">
+            <div>
+                <a href="/app/agreement.html" target="_blank" class="footer_a">用户协议</a>&nbsp;&nbsp;
+                <a href="/app/privacy.html" target="_blank" class="footer_a">隐私策略</a>&nbsp;&nbsp;
+                <a href="mailto:toquery@qq.com" target="_blank" class="footer_a">联系我们</a>
+            </div>
+            <div class="color_273D37 uk-margin-small-top">
+                <a href="https://beian.miit.gov.cn/state/outPortal/loginPortal.action#/Integrated/index" target="_blank"
+                   class="support_a">鲁ICP备xxxxx号</a>
+            </div>
+            <div class="uk-margin-small-top">Copyright © 2023 SC. All Rights Reserved.</div>
+        </div>
+    </div>
+
+
+</body>
+</html>
